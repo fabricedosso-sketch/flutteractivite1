@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:activite1/pages/redacteur_interface.dart';
 
 void main() {
 /* Elle nous permet de lancer l'application à travers la fonction runApp en utilisant le Widget monAppli comme Widget racine. 
@@ -20,7 +21,8 @@ class MonAppli extends StatelessWidget {
       // Création d'un widget pour désactiver l’affichage de la bannière de débogage dans le coin supérieur droit de l'application
       debugShowCheckedModeBanner: false, 
       // Création d'un widget pour parametrer la première page de l'application 
-      home: PageAcceuil());
+      // ici la page d'acceuil fait appel à la page de la gestion des redacteurs qui est dans un fichier different du main.
+      home: MonApplication());
   }
 }
 /* Déclaration et initialisation de la classe qui va servir de page principale
@@ -216,7 +218,7 @@ class PartieRubrique extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             // Ajout d'une image dans le cadre comme widget enfant
             child: const Image(
-              image: AssetImage('assets/images/img4.jpg')),
+              image: AssetImage('assets/images/img4.jpeg')),
           ),
           // Ajout d'un cadre rectangulaire aux côtés arrondis dans le widget parent
           ClipRRect(
